@@ -1,0 +1,33 @@
+col_fortress_ecu = {
+    icon = GFX_colony_type_fortress
+
+    potential = {
+        is_colony = yes
+        is_planet_class = pc_city
+        is_capital = no
+    }
+
+    allow = {
+        is_planet_class = pc_city
+    }
+
+    ai_weight = {
+        weight = 0
+        modifier = {
+            add = 200
+            has_building = building_stronghold
+        }
+        modifier = {
+            add = 300
+            has_building = building_fortress
+        }
+    }
+
+    planet_modifier = {
+       planet_army_build_speed_mult = 0.25
+       planet_orbital_bombardment_damage = -0.25
+       army_defense_damage_mult = 0.25
+       soldier_jobs_bonus_workforce_mult = 0.25
+       planet_defense_armies_add = 3
+    }
+}
