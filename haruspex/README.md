@@ -1,21 +1,24 @@
 # Haruspex
 
 Adds the Cybernetic Creed's two special jobs - **Haruspex** and **Technophant** -
-to any Democratic, Oligarchic, Dictatorial or Imperial empire through a new
-civic: the **Haruspex Creed**.
+to any Spiritualist Democratic, Oligarchic, Dictatorial or Imperial empire
+through a new civic: the **Haruspex Creed**. The civic cannot be combined with
+the Cybernetic Creed origin, which already provides the jobs.
 
 ## What it does
 
-- Adds the `civic_haruspex_creed` civic, available only to the four standard
-  (non-corporate, non-gestalt) authorities.
+- Adds the `civic_haruspex_creed` civic. It requires the Spiritualist or
+  Fanatic Spiritualist ethic, one of the four standard (non-corporate,
+  non-gestalt) authorities, and an origin other than Cybernetic Creed.
 - Converts every Bureaucrat job into a Haruspex job and every Politician job
   into a Technophant job, empire-wide.
 - Lifts the vanilla restriction that only Cybernetic pops can work these jobs.
-  Availability is now gated by having the Cybernetic Creed **origin** or the
-  Haruspex Creed **civic**, not by a species trait.
-- Leaves the Cybernetic Creed origin's job swaps and spiritualist requirement
-  intact, but lifts its pop trait gate too, so the same rule applies to both
-  the origin and the civic.
+  Availability is gated by the Spiritualist ethic plus having the Cybernetic
+  Creed **origin** or the Haruspex Creed **civic**, not by a species trait.
+- Applies the same Spiritualist check to both job swaps, so abandoning
+  Spiritualism reverts the jobs as well as invalidating the civic.
+- Keeps the Cybernetic Creed origin's job swaps available and only lifts its
+  pop trait gate; the origin still requires Spiritualism.
 
 No new building is added: the civic works purely by swapping the existing jobs.
 
@@ -40,6 +43,11 @@ This mod **fully overrides** three vanilla definitions:
 Any other mod that edits the same definitions will conflict, and load order
 decides the winner. The job override is copied from Stellaris 4.5.2; after a
 major patch, compare it against `common/pop_jobs/13_machine_age_jobs.txt`.
+
+The `politician_is_technophant` override also applies the Spiritualist check
+that vanilla only applies to the Haruspex swap. This means a Cybernetic Creed
+empire that abandons Spiritualism loses both jobs; vanilla would have kept the
+Technophant. This is deliberate, so both jobs follow the same rule.
 
 The mod uses vanilla job art and the vanilla Technophant definition. Only the
 Haruspex job block is copied, so its `possible` gate can be changed; everything
@@ -72,9 +80,9 @@ too strong.
    ```
 
 3. Enable **Haruspex** in the launcher's Playset tab.
-4. Start a non-gestalt, non-corporate empire, take the **Haruspex Creed** civic,
-   and check that the capital's Politician job reads **Technophant** and its
-   Bureaucrat jobs read **Haruspex**.
+4. Start a Spiritualist empire that does not use the Cybernetic Creed origin,
+   take the **Haruspex Creed** civic, and check that the capital's Politician
+   job reads **Technophant** and its Bureaucrat jobs read **Haruspex**.
 5. Check `Documents/Paradox Interactive/Stellaris/logs/error.log` for script
    errors after launch.
 
