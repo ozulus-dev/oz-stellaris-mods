@@ -1,0 +1,114 @@
+# Full override of the vanilla Haruspex job.
+#
+# The only change from vanilla is `possible`: the Cybernetic/Cybernetic Creed
+# trait requirement is removed so that any pop in an empire with the Cybernetic
+# Creed origin or the Haruspex Creed civic can work the job. Availability is
+# gated by `bureaucrat_is_haruspex` instead.
+#
+# Keep the rest in sync with common/pop_jobs/13_machine_age_jobs.txt if Paradox
+# changes the job in a future patch.
+haruspex = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_temple
+			icon = haruspex
+		}
+	}
+
+	tags = { unity research amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_bureaucrats
+		produces = {
+			unity = 1.5
+			engineering_research = 1.25
+		}
+		produces = {	# Reduced production to make up for the trade value
+			trigger = {
+				owner? = { is_megacorp = yes }
+			}
+			engineering_research = -0.25
+			trade = 2
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	triggered_planet_modifier = { # Common to all Priests
+		potential = {
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = { # Common to all Priests
+		potential = {
+			colony? = {
+				has_active_building = building_league_offices
+			}
+			owner? = { NOT = { has_valid_civic = civic_dystopian_society } }
+		}
+		planet_amenities_add = 100
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_country_modifier = { # Common to all Priests
+		potential = {
+			owner? = { has_valid_civic = civic_efficient_bureaucracy }
+		}
+		country_edict_fund_add = 2
+		mult = value:job_total_output_modifier|JOB|haruspex|RESOURCE|unity|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			colony? = {
+				owner? = { has_tradition = tr_modularity_4 }
+			}
+		}
+		planet_jobs_worker_produces_mult = 0.02
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			owner? = { has_civic = civic_exalted_priesthood }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.1
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+}

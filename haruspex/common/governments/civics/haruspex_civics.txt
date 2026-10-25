@@ -1,0 +1,31 @@
+civic_haruspex_creed = {
+	description = "civic_tooltip_haruspex_creed_effects"
+
+	potential = {
+		authority = {
+			OR = {
+				value = auth_democratic
+				value = auth_oligarchic
+				value = auth_dictatorial
+				value = auth_imperial
+			}
+		}
+	}
+
+	possible = {
+		authority = {
+			OR = {
+				value = auth_democratic
+				value = auth_oligarchic
+				value = auth_dictatorial
+				value = auth_imperial
+			}
+		}
+	}
+
+	random_weight = { base = @civic_default_random_weight }
+
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+}

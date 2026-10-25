@@ -1,0 +1,24 @@
+bureaucrat_is_haruspex = {
+	OR = {
+		# The Creed allows any pop to work the job, regardless of ethics.
+		owner? = {
+			has_valid_civic = civic_haruspex_creed
+		}
+		# Vanilla behaviour is preserved for the Cybernetic Creed origin.
+		AND = {
+			owner? = {
+				has_origin = origin_cybernetic_creed
+			}
+			bureaucrat_is_spiritualist = yes
+		}
+	}
+}
+
+politician_is_technophant = {
+	owner? = {
+		OR = {
+			has_origin = origin_cybernetic_creed
+			has_valid_civic = civic_haruspex_creed
+		}
+	}
+}

@@ -1,35 +1,64 @@
 # Haruspex
 
-A Stellaris mod. This is a scaffold: the structure, metadata and localisation
-plumbing are in place, but there is no gameplay content yet.
+Adds the Cybernetic Creed's two special jobs - **Haruspex** and **Technophant** -
+to any Democratic, Oligarchic, Dictatorial or Imperial empire through a new
+civic: the **Haruspex Creed**.
 
-## Layout
+## What it does
+
+- Adds the `civic_haruspex_creed` civic, available only to the four standard
+  (non-corporate, non-gestalt) authorities.
+- Converts every Bureaucrat job into a Haruspex job and every Politician job
+  into a Technophant job, empire-wide.
+- Lifts the vanilla restriction that only Cybernetic pops can work these jobs.
+  Availability is now gated by having the Cybernetic Creed **origin** or the
+  Haruspex Creed **civic**, not by a species trait.
+- Leaves the Cybernetic Creed origin's job swaps and spiritualist requirement
+  intact, but lifts its pop trait gate too, so the same rule applies to both
+  the origin and the civic.
+
+No new building is added: the civic works purely by swapping the existing jobs.
+
+## Files
 
 | Path | Purpose |
 | --- | --- |
-| `descriptor.mod` | Mod metadata: name, tags, supported game version |
-| `thumbnail.png` | Placeholder Workshop/preview image, 512x512 |
-| `common/` | Game data definitions (buildings, jobs, edicts, components, ...) |
-| `events/` | Event and on_action scripts |
-| `localisation/english/` | English strings, one `*_l_english.yml` per content area |
-| `interface/` | UI files (`.gui`) |
-| `gfx/interface/icons/` | Icons referenced by `interface/` and `common/` (`.dds`) |
+| `common/governments/civics/haruspex_civics.txt` | The Haruspex Creed civic |
+| `common/scripted_triggers/haruspex_scripted_triggers.txt` | Extends the vanilla job-swap triggers with the civic |
+| `common/pop_jobs/haruspex_jobs.txt` | Full override of the Haruspex job, with the trait gate removed |
+| `localisation/english/haruspex_l_english.yml` | Civic text and updated job descriptions |
+| `gfx/interface/icons/governments/civics/civic_haruspex_creed.dds` | Civic icon (29x29 ARGB, matching vanilla) |
 
-Empty folders are kept in git with a `.gitkeep` file. Delete the `.gitkeep`
-once a folder has real content.
+## Compatibility
 
-## Conventions
+This mod **fully overrides** three vanilla definitions:
 
-- Prefix every game ID with `haruspex_` to avoid collisions with vanilla and
-  other mods (for example `haruspex_building_oracle`).
-- Localisation keys match the game ID without the prefix pattern being
-  mandatory, but keeping IDs and keys aligned makes files easy to grep.
-- Localisation `.yml` files must be saved as **UTF-8 with BOM**. Stellaris
-  silently ignores files without the BOM.
-- Bump `supported_version` in `descriptor.mod` when Paradox releases a new
-  major patch, then retest.
-- The `tags` block controls Workshop categories; adjust it once the mod's
-  actual scope is clear.
+- `bureaucrat_is_haruspex` (scripted trigger)
+- `politician_is_technophant` (scripted trigger)
+- `haruspex` (pop job)
+
+Any other mod that edits the same definitions will conflict, and load order
+decides the winner. The job override is copied from Stellaris 4.5.2; after a
+major patch, compare it against `common/pop_jobs/13_machine_age_jobs.txt`.
+
+The mod uses vanilla job art and the vanilla Technophant definition. Only the
+Haruspex job block is copied, so its `possible` gate can be changed; everything
+else stays in the base game.
+
+## Balance
+
+The jobs keep their vanilla output. A job swap applies the base
+Bureaucrat/Politician production plus the vanilla swap modifiers, so the
+effective numbers are approximately:
+
+- **Haruspex**: 2 Unity, 1 Engineering Research and extra Amenities; 2 Consumer
+  Goods upkeep (compared with a Bureaucrat's 3 Unity).
+- **Technophant**: 5 Unity, 2 Engineering Research and extra Amenities; 3
+  Consumer Goods upkeep (a straight Engineering addition to the Politician).
+
+The Haruspex trades 1 Unity for 1 Engineering; the Technophant is close to a
+straight upgrade. That is the first pair of numbers to tune if the civic feels
+too strong.
 
 ## Testing locally
 
@@ -43,8 +72,16 @@ once a folder has real content.
    ```
 
 3. Enable **Haruspex** in the launcher's Playset tab.
-4. Check `Documents/Paradox Interactive/Stellaris/logs/error.log` after launch.
+4. Start a non-gestalt, non-corporate empire, take the **Haruspex Creed** civic,
+   and check that the capital's Politician job reads **Technophant** and its
+   Bureaucrat jobs read **Haruspex**.
+5. Check `Documents/Paradox Interactive/Stellaris/logs/error.log` for script
+   errors after launch.
 
-A symlink to this repository folder is usually easiest, since edits are then
-picked up without copying. Windows requires Developer Mode or an elevated
-shell to create symlinks (`New-Item -ItemType SymbolicLink`).
+Localisation files must stay **UTF-8 with BOM**; Stellaris ignores them
+otherwise.
+
+## Publishing
+
+Before uploading to the Workshop, set `remote_file_id` in `descriptor.mod` and
+bump `version` for each release.
