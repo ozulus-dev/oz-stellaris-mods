@@ -22,6 +22,9 @@ the Cybernetic Creed origin, which already provides the jobs.
 - Unlocks the `building_haruspex_sanctum`, a unity building that adds +100
   Technophant and +200 Haruspex Jobs, +10% Spiritualist attraction, and +5%
   unity from jobs.
+- Unlocks the `councilor_haruspex_creed` ("Chief Haruspex") council position
+  for Officials, giving +2% Bureaucrat Job Output per skill level. Haruspex
+  jobs use the bureaucrat economic category, so they benefit too.
 
 The Creed's five origin-specific branch buildings remain origin-only. The
 Sanctum of the Haruspex is the civic's own centerpiece, not a port of them.
@@ -32,6 +35,7 @@ Sanctum of the Haruspex is the civic's own centerpiece, not a port of them.
 | --- | --- |
 | `common/governments/civics/haruspex_civics.txt` | The Haruspex Creed civic |
 | `common/buildings/haruspex_buildings.txt` | The Sanctum of the Haruspex civic building |
+| `common/governments/councilors/haruspex_councilors.txt` | The Chief Haruspex council position |
 | `common/scripted_triggers/haruspex_scripted_triggers.txt` | Extends the vanilla job-swap triggers with the civic |
 | `common/pop_jobs/haruspex_jobs.txt` | Full override of the Haruspex job, with the trait gate removed |
 | `localisation/english/haruspex_l_english.yml` | Civic text and updated job descriptions |
@@ -78,6 +82,11 @@ Jobs, +10% Spiritualist attraction, and +5% unity from jobs. It is limited to
 one per planet and three per empire, costs a mid-tier building slot, and
 requires Planetary Government, so it is a solid but not free addition.
 
+The Chief Haruspex councilor adds +2% Bureaucrat Job Output per skill level.
+At level 10 that is +20%, and because Haruspex jobs use the bureaucrat
+economic category, it applies to them as well as to any remaining Bureaucrat
+jobs.
+
 ## Testing locally
 
 1. Copy or symlink this folder into
@@ -95,7 +104,9 @@ requires Planetary Government, so it is a solid but not free addition.
    job reads **Technophant** and its Bureaucrat jobs read **Haruspex**.
 5. Build the **Sanctum of the Haruspex** and confirm it adds Technophant and
    Haruspex Jobs and the unity/spiritualist bonuses.
-6. Check `Documents/Paradox Interactive/Stellaris/logs/error.log` for script
+6. Check that the **Chief Haruspex** council position appears for an Official
+   and that its Bureaucrat output bonus scales with skill level.
+7. Check `Documents/Paradox Interactive/Stellaris/logs/error.log` for script
    errors after launch.
 
 Localisation files must stay **UTF-8 with BOM**; Stellaris ignores them
