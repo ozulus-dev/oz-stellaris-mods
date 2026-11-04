@@ -12,9 +12,10 @@ the Cybernetic Creed origin, which already provides the jobs.
   non-gestalt) authorities, and an origin other than Cybernetic Creed.
 - Converts every Bureaucrat job into a Haruspex job and every Politician job
   into a Technophant job, empire-wide.
-- Lifts the vanilla restriction that only Cybernetic pops can work these jobs.
-  Availability is gated by the Spiritualist ethic plus having the Cybernetic
-  Creed **origin** or the Haruspex Creed **civic**, not by a species trait.
+- Lifts the vanilla restriction that only Cybernetic pops can work these jobs,
+  including the Technophant gate added in 4.5.3. Availability is gated by the
+  Spiritualist ethic plus having the Cybernetic Creed **origin** or the
+  Haruspex Creed **civic**, not by a species trait.
 - Applies the same Spiritualist check to both job swaps, so abandoning
   Spiritualism reverts the jobs as well as invalidating the civic.
 - Keeps the Cybernetic Creed origin's job swaps available and only lifts its
@@ -37,30 +38,34 @@ Sanctum of the Haruspex is the civic's own centerpiece, not a port of them.
 | `common/buildings/haruspex_buildings.txt` | The Sanctum of the Haruspex civic building |
 | `common/governments/councilors/haruspex_councilors.txt` | The Chief Haruspex council position |
 | `common/scripted_triggers/haruspex_scripted_triggers.txt` | Extends the vanilla job-swap triggers with the civic |
-| `common/pop_jobs/haruspex_jobs.txt` | Full override of the Haruspex job, with the trait gate removed |
+| `common/pop_jobs/haruspex_jobs.txt` | Full overrides of the Haruspex and Technophant jobs, with the trait gates removed |
 | `localisation/english/haruspex_l_english.yml` | Civic text and updated job descriptions |
 | `gfx/interface/icons/governments/civics/civic_haruspex_creed.dds` | Civic icon (29x29 ARGB, matching vanilla) |
 
 ## Compatibility
 
-This mod **fully overrides** three vanilla definitions:
+This mod **fully overrides** four vanilla definitions:
 
 - `bureaucrat_is_haruspex` (scripted trigger)
 - `politician_is_technophant` (scripted trigger)
 - `haruspex` (pop job)
+- `technophant` (pop job)
 
 Any other mod that edits the same definitions will conflict, and load order
-decides the winner. The job override is copied from Stellaris 4.5.2; after a
-major patch, compare it against `common/pop_jobs/13_machine_age_jobs.txt`.
+decides the winner. The job overrides are copied from Stellaris 4.5.3; after a
+patch, compare them against `common/pop_jobs/13_machine_age_jobs.txt`.
+
+Stellaris 4.5.3 added a Cybernetic/Cybernetic Creed trait gate to Technophant.
+This mod removes it again, so the Haruspex Creed civic and the Cybernetic Creed
+origin keep working for any pop in a qualifying empire.
 
 The `politician_is_technophant` override also applies the Spiritualist check
 that vanilla only applies to the Haruspex swap. This means a Cybernetic Creed
 empire that abandons Spiritualism loses both jobs; vanilla would have kept the
 Technophant. This is deliberate, so both jobs follow the same rule.
 
-The mod uses vanilla job art and the vanilla Technophant definition. Only the
-Haruspex job block is copied, so its `possible` gate can be changed; everything
-else stays in the base game.
+The mod uses vanilla job art and copies only the two affected job blocks, so
+their `possible` gates can be changed; everything else stays in the base game.
 
 ## Balance
 
@@ -99,9 +104,10 @@ jobs.
    ```
 
 3. Enable **Haruspex** in the launcher's Playset tab.
-4. Start a Spiritualist empire that does not use the Cybernetic Creed origin,
-   take the **Haruspex Creed** civic, and check that the capital's Politician
-   job reads **Technophant** and its Bureaucrat jobs read **Haruspex**.
+4. Start a Spiritualist empire with non-Cybernetic pops that does not use the
+   Cybernetic Creed origin, take the **Haruspex Creed** civic, and check that
+   the capital's Politician job reads **Technophant** and its Bureaucrat jobs
+   read **Haruspex**. This verifies both job trait gates are removed.
 5. Build the **Sanctum of the Haruspex** and confirm it adds Technophant and
    Haruspex Jobs and the unity/spiritualist bonuses.
 6. Check that the **Chief Haruspex** council position appears for an Official
