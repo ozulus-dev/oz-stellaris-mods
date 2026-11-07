@@ -1,4 +1,4 @@
-name="Selective Megastructure System Limit Removal"
+name="Megastructure System Limit Removal"
 tags={
 	"Balance"
 	"Gameplay"

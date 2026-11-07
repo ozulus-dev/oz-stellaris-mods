@@ -1,4 +1,4 @@
-# Selective Megastructure System Limit Removal
+# Megastructure System Limit Removal
 
 Removes the "no existing megastructure in this system" restriction for these
 megastructures only, so they can be built in a system that already contains
