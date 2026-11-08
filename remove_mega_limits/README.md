@@ -26,3 +26,8 @@ The mod overrides the vanilla megastructure definitions and removes the
 
 These files are full copies of the Stellaris 4.5.3 versions. They will need to
 be refreshed if a game update changes the vanilla definitions.
+
+The Mega Shipyard stages also set `use_planet_resource = yes`. Vanilla
+dismantles the star's orbital station when the shipyard is completed; with this
+flag the shipyard collects the star's deposits itself, so those resources are
+not lost.
