@@ -1,0 +1,21 @@
+bureaucrat_is_haruspex = {
+	owner? = {
+		OR = {
+			has_origin = origin_cybernetic_creed
+			has_valid_civic = civic_haruspex_creed
+		}
+	}
+	# Both the origin and the civic require a Spiritualist ethic, so this keeps
+	# the vanilla gate (and drops the job if the empire abandons Spiritualism).
+	bureaucrat_is_spiritualist = yes
+}
+
+politician_is_technophant = {
+	owner? = {
+		OR = {
+			has_origin = origin_cybernetic_creed
+			has_valid_civic = civic_haruspex_creed
+		}
+	}
+	bureaucrat_is_spiritualist = yes
+}

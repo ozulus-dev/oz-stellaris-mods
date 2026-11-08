@@ -1,0 +1,12 @@
+﻿l_english:
+ civic_haruspex_creed:0 "Haruspex Creed"
+ civic_haruspex_creed_desc:0 "The state does not merely tolerate the fusion of flesh and machine - it venerates it. Haruspices read the entrails of the body politic and prescribe holy augmentation, while technophants interpret the will of the machine for the faithful."
+ councilor_haruspex_creed:0 "Chief Haruspex"
+ councilor_haruspex_creed_female:0 "$councilor_haruspex_creed$"
+ councilor_haruspex_creed_desc:0 "The $TITLE$ directs the Creed's administrative apparatus, wringing every drop of output from the faithful bureaucracy."
+ councilor_haruspex_creed_custom_modifier_desc:0 "This also applies to Haruspex Jobs."
+ civic_tooltip_haruspex_creed_effects:0 "- Requires the Spiritualist or Fanatic Spiritualist ethic.\n- Cannot be combined with the Cybernetic Creed origin.\n- Unlocks the $building_haruspex_sanctum$ Building.\n- Unlocks the $councilor_haruspex_creed$ Council Position.\n- $job_bureaucrat$ Jobs are converted to £job_haruspex£ §Y$job_haruspex_plural$§! Jobs.\n- $job_politician$ Jobs are converted to £job_technophant£ §Y$job_technophant_plural$§! Jobs.\n- Any Pop can work these Jobs, regardless of traits."
+ job_haruspex_desc:0 "Evangelical mechanics and surgeons of the divine, rendering unworthy [Owner.Species.GetFleshTypeCyberCreed] and replacing it with holy cybernetics."
+ job_technophant_desc:0 "Exalted interpreters of divine wetware. They guide the people toward a perfect fusion of [Owner.Species.GetFleshTypeCyberCreed] and machine."
+ building_haruspex_sanctum:0 "Sanctum of the Haruspex"
+ building_haruspex_sanctum_desc:0 "A temple where the Haruspex Creed reads the entrails of the body politic and ministers to the faithful. Devout bureaucrats and technophants oversee the congregation and its holy augmentations."

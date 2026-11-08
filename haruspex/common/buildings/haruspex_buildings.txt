@@ -1,0 +1,82 @@
+building_haruspex_sanctum = {
+	position_priority = 100
+	base_buildtime = @b2_time
+	planet_limit = 1
+	empire_limit = {
+		base = 3
+	}
+	exempt_from_ai_planet_specialization = no
+
+	icon = building_the_sanctum_of_augmentation
+
+	category = unity
+
+	building_sets = {
+		government
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_haruspex_creed
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			owner = {
+				NOT = { has_valid_civic = civic_haruspex_creed }
+			}
+		}
+	}
+
+	convert_to = {
+		building_temple
+	}
+
+	resources = {
+		category = planet_buildings
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = rare_crystals
+			COST = @b2_minerals
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	planet_modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.10
+		planet_jobs_unity_produces_mult = 0.05
+	}
+
+	inline_script = {
+		script = jobs/politician_add
+		AMOUNT = @building_static_jobs_low
+	}
+
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = @building_static_jobs
+	}
+
+	prerequisites = {
+		"tech_planetary_government"
+	}
+
+	ai_weight_coefficient = @static_jobs_ai_weight_coefficient
+}
