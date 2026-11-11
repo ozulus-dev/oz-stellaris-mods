@@ -11,8 +11,8 @@ The mod:
   Fanatic Spiritualist ethic, one of the four standard (non-corporate,
   non-gestalt) authorities, and an origin other than Cybernetic Creed.
 - Can only be selected at empire creation and cannot be removed afterwards.
-- Makes Haruspex, Technophant and Bureaucrat Jobs produce +0.01 Society
-  and Physics Research each, or +1 of each per 100 Jobs.
+- Makes Haruspex, Technophant and Bureaucrat Jobs produce +1 Society
+  and Physics Research per 100 Jobs.
 - Converts every Bureaucrat job into a Haruspex job and every Politician job
   into a Technophant job, empire-wide.
 - Lifts the vanilla restriction that only Cybernetic pops can work these jobs,
@@ -65,7 +65,7 @@ The civic reuses the vanilla Cybernetic Creed origin icon
 
 The civic sets `modification = no`, making it a permanent civic: it can only be
 chosen during empire creation and cannot be added or removed afterwards. Its
-`planet_bureaucrats_*_research_produces_add = 0.01` modifiers apply to every Job
+`planet_bureaucrats_*_research_produces_add = 1` modifiers apply to every Job
 in the bureaucrat economic category, including Haruspex and Technophant.
 
 The `politician_is_technophant` override also applies the Spiritualist check
@@ -86,8 +86,8 @@ The Haruspex trades 1 Unity for 1 Engineering; the Technophant is close to a
 straight upgrade. That is the first pair of numbers to tune if the civic feels
 too strong.
 
-The civic also adds +0.01 Physics and Society Research per
-Haruspex, Technophant or Bureaucrat Job, or +1 of each per 100 Jobs.
+The civic also adds +1 Physics and Society Research per 100 Haruspex,
+Technophant or Bureaucrat Jobs.
 
 The Sanctum of the Haruspex adds another +100 Technophant and +200 Haruspex
 Jobs, +10% Spiritualist attraction, and +5% unity from jobs. It is limited to
