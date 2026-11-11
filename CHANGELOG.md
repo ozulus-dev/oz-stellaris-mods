@@ -13,6 +13,14 @@ date, newest first, and are derived from the commits on `main`.
 - Bumped `supported_version` to `4.5.*`.
 - Refreshed version references in the repository and mod READMEs.
 
+### Haruspex
+- Made the **Haruspex Creed** civic a permanent civic: it can only be selected
+  at empire creation and cannot be removed afterwards.
+- Granted a Civic Slot through `country_government_civic_points_add`, so the
+  civic no longer consumes one of the empire's civic picks.
+- Switched the civic icon to the vanilla Cybernetic Creed origin icon.
+- Updated the civic tooltip and README to describe the permanent/free behaviour.
+
 ## 2026-11-08
 
 ### Megastructure System Limit Removal
