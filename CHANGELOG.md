@@ -16,8 +16,8 @@ date, newest first, and are derived from the commits on `main`.
 ### Haruspex
 - Made the **Haruspex Creed** civic a permanent civic: it can only be selected
   at empire creation and cannot be removed afterwards.
-- Replaced the extra Civic Slot with +1 Physics, Society and Engineering
-  Research per 100 Haruspex, Technophant or Bureaucrat Jobs.
+- Replaced the extra Civic Slot with +1 Physics and Society Research per 100
+  Haruspex, Technophant or Bureaucrat Jobs.
 - Switched the civic icon to the vanilla Cybernetic Creed origin icon.
 - Updated the civic tooltip and README to describe the permanent civic and
   research bonus.

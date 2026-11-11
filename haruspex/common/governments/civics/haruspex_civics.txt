@@ -50,7 +50,6 @@ civic_haruspex_creed = {
 	# +1 of each research per 100 Haruspex, Technophant or Bureaucrat Jobs.
 	modifier = {
 		planet_bureaucrats_society_research_produces_add = 0.01
-		planet_bureaucrats_engineering_research_produces_add = 0.01
 		planet_bureaucrats_physics_research_produces_add = 0.01
 	}
 
