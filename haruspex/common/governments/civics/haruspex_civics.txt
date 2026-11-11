@@ -1,5 +1,7 @@
 civic_haruspex_creed = {
 	description = "civic_tooltip_haruspex_creed_effects"
+	icon = "gfx/interface/icons/origins/origins_cybernetic_creed.dds"
+	modification = no
 
 	potential = {
 		ethics = {
@@ -43,6 +45,12 @@ civic_haruspex_creed = {
 		origin = {
 			NOT = { value = origin_cybernetic_creed }
 		}
+	}
+
+	# Permanent civics still consume a pick by default. Grant a Civic Slot back
+	# so the civic is free to take.
+	modifier = {
+		country_government_civic_points_add = 1
 	}
 
 	random_weight = { base = @civic_default_random_weight }
