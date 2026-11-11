@@ -7,12 +7,11 @@ col_fortress_ecu = {
         is_capital = no
     }
 
-    allow = {
-        is_planet_class = pc_city
+    ai_building_set_affinity = {
+        fortress = 2.0
     }
 
-    ai_weight = {
-        weight = 0
+    weight_modifier = {
         modifier = {
             add = 200
             has_building = building_stronghold

@@ -5,5 +5,5 @@ tags={
 	"Fixes"
 	"Planetary Diversity"
 }
-supported_version="4.4.*"
+supported_version="4.5.*"
 remote_file_id="3734557853"

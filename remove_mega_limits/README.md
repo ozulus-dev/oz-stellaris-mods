@@ -24,7 +24,7 @@ The mod overrides the vanilla megastructure definitions and removes the
 - `common/megastructures/09_interstellar_assembly.txt`
 - `common/megastructures/11_mega_shipyard.txt`
 
-These files are full copies of the Stellaris 4.5.3 versions. They will need to
+These files are full copies of the Stellaris 4.5.4 versions. They will need to
 be refreshed if a game update changes the vanilla definitions.
 
 The Mega Shipyard stages also set `use_planet_resource = yes`. Vanilla

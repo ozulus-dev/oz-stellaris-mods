@@ -52,7 +52,7 @@ This mod **fully overrides** four vanilla definitions:
 - `technophant` (pop job)
 
 Any other mod that edits the same definitions will conflict, and load order
-decides the winner. The job overrides are copied from Stellaris 4.5.3; after a
+decides the winner. The job overrides are copied from Stellaris 4.5.4; after a
 patch, compare them against `common/pop_jobs/13_machine_age_jobs.txt`.
 
 Stellaris 4.5.3 added a Cybernetic/Cybernetic Creed trait gate to Technophant.
