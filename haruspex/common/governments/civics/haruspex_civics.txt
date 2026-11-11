@@ -47,11 +47,11 @@ civic_haruspex_creed = {
 		}
 	}
 
-	# Civic modifiers are not applied during empire creation, so this extra slot
-	# only takes effect after the game starts. At creation the civic still costs
-	# a pick.
+	# +1 of each research per 100 Haruspex, Technophant or Bureaucrat Jobs.
 	modifier = {
-		country_government_civic_points_add = 1
+		planet_bureaucrats_society_research_produces_add = 0.01
+		planet_bureaucrats_engineering_research_produces_add = 0.01
+		planet_bureaucrats_physics_research_produces_add = 0.01
 	}
 
 	random_weight = { base = @civic_default_random_weight }
