@@ -16,8 +16,9 @@ date, newest first, and are derived from the commits on `main`.
 ### Haruspex
 - Made the **Haruspex Creed** civic a permanent civic: it can only be selected
   at empire creation and cannot be removed afterwards.
-- Granted a Civic Slot through `country_government_civic_points_add`, so the
-  civic no longer consumes one of the empire's civic picks.
+- Granted a Civic Slot through `country_government_civic_points_add`. Civic
+  modifiers are ignored during empire creation, so the civic still costs a pick
+  at creation; the extra slot applies after the game starts.
 - Switched the civic icon to the vanilla Cybernetic Creed origin icon.
 - Updated the civic tooltip and README to describe the permanent/free behaviour.
 

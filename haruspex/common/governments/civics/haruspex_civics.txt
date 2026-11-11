@@ -47,8 +47,9 @@ civic_haruspex_creed = {
 		}
 	}
 
-	# Permanent civics still consume a pick by default. Grant a Civic Slot back
-	# so the civic is free to take.
+	# Civic modifiers are not applied during empire creation, so this extra slot
+	# only takes effect after the game starts. At creation the civic still costs
+	# a pick.
 	modifier = {
 		country_government_civic_points_add = 1
 	}

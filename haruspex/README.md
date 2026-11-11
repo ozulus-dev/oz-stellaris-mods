@@ -11,7 +11,8 @@ The mod:
   Fanatic Spiritualist ethic, one of the four standard (non-corporate,
   non-gestalt) authorities, and an origin other than Cybernetic Creed.
 - Can only be selected at empire creation and cannot be removed afterwards.
-- Grants +1 Civic Slot, so it does not consume one of the empire's civic picks.
+- Grants +1 Civic Slot after the game starts. Empire creation ignores civic
+  modifiers, so the civic still costs a pick at creation.
 - Converts every Bureaucrat job into a Haruspex job and every Politician job
   into a Technophant job, empire-wide.
 - Lifts the vanilla restriction that only Cybernetic pops can work these jobs,
@@ -64,8 +65,10 @@ The civic reuses the vanilla Cybernetic Creed origin icon
 
 The civic sets `modification = no`, making it a permanent civic: it can only be
 chosen during empire creation and cannot be added or removed afterwards. Its
-`country_government_civic_points_add = 1` modifier grants a Civic Slot back, so
-the civic costs no civic picks.
+`country_government_civic_points_add = 1` modifier grants a Civic Slot, but
+civic modifiers are not applied during empire creation. The civic therefore
+still costs a pick at creation; the extra slot takes effect after the game
+starts and lets the empire add a third civic through a government reform.
 
 The `politician_is_technophant` override also applies the Spiritualist check
 that vanilla only applies to the Haruspex swap. A Cybernetic Creed empire that
