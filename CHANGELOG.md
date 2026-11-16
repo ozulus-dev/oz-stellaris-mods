@@ -3,6 +3,13 @@
 All notable changes to the mods in this repository. Entries are grouped by
 date, newest first, and are derived from the commits on `main`.
 
+## 2026-11-16
+
+### Haruspex
+- Trimmed the **Haruspex Creed** civic tooltip so requirements, modifiers and
+  council-position details are not repeated. It now lists only the Sanctum
+  unlock, the job conversions, and the pop-trait exemption.
+
 ## 2026-11-11
 
 ### Fortress Designation for Ecumenopolis
