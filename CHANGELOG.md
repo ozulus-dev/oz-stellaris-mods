@@ -8,7 +8,8 @@ date, newest first, and are derived from the commits on `main`.
 ### Haruspex
 - Trimmed the **Haruspex Creed** civic tooltip so requirements, modifiers and
   council-position details are not repeated. It now lists only the Sanctum
-  unlock, the job conversions, and the pop-trait exemption.
+  unlock and the job conversions.
+- Added the building icon to the Sanctum unlock line.
 
 ## 2026-11-11
 
