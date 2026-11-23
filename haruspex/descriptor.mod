@@ -4,4 +4,4 @@ image="thumbnail.png"
 tags={
 	"Gameplay"
 }
-supported_version="4.5.*"
+supported_version="4.6.*"

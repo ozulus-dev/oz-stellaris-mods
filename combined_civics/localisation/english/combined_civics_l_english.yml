@@ -1,0 +1,13 @@
+﻿l_english:
+ civic_techno_aristocratic_guilds:0 "Techno-Aristocratic Guilds"
+ civic_techno_aristocratic_guilds_desc:0 "Science, commerce and hereditary privilege have fused into a single ruling class. Technocrats set the policy, the guilds finance it, and the old nobility supplies its legitimacy."
+ civic_tooltip_techno_aristocratic_guilds_effects:0 "- £job_politician£ §Y$job_politician_plural$§! Jobs can become £job_noble£ §Y$job_noble_plural$§!, £job_merchant£ §Y$job_merchant_plural$§! or £job_head_researcher£ §Y$job_head_researcher_plural$§! Jobs.\n- §Y$building_noble_estates$§! can be constructed and adds £job_noble£ §Y$job_noble$§! Jobs.\n- Grants access to the £building£ §Y$holding_noble_vacation_homes$§! Holding.\n- §Y$building_institute$§! grants additional £job_head_researcher£ §Y$job_head_researcher_plural$§! Jobs.\n- §Y$building_galactic_stock_exchange$§! grants additional £job_merchant£ §Y$job_merchant_plural$§! Jobs.\n- §G+1§! Research Alternative.\n- §G+10%§! Ruler Jobs Output.\n- §R+10%§! Leader Upkeep.\n- §YExpertise§! traits have additional effects."
+ councilor_techno_aristocratic_guilds_science:0 "Senior Science Director"
+ councilor_techno_aristocratic_guilds_science_female:0 "$councilor_techno_aristocratic_guilds_science$"
+ councilor_techno_aristocratic_guilds_science_desc:0 "The $TITLE$ ensures fundamental research is promoted and shared between departments."
+ civic_philosopher_admiralty:0 "Philosopher Admiralty"
+ civic_philosopher_admiralty_desc:0 "The fleet, the diplomatic service and the throne speak with one voice. Admirals are scholar-diplomats, and the ruler is expected to command both the council chamber and the war room."
+ civic_tooltip_philosopher_admiralty_effects:0 "- §G+2§! £envoy£ Envoys.\n- §G+15%§! Diplomatic Weight.\n- §G+40§! Trust Cap.\n- §G+75%§! Envoy Improve Relations.\n- §G+10%§! Ship Fire Rate.\n- §G-25%§! Commander Upkeep.\n- §G+20%§! Command Limit.\n- §Y$commander_plural_with_icon$§! start at level 3.\n- §G+5§! Ruler Skill."
+ councilor_philosopher_admiralty:0 "Lord High Admiral"
+ councilor_philosopher_admiralty_female:0 "Lady High Admiral"
+ councilor_philosopher_admiralty_desc:0 "The $TITLE$ is the ceremonial head of the navy, upholding its high standards."

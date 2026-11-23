@@ -1,0 +1,16 @@
+# Aristocratic Elite Initial Setup
+# Only for empires with Aristocratic Elite or Techno-Aristocratic Guilds
+# Buildings Added:
+#	* Noble Estates (no zone set)
+
+if = {
+	limit = {
+		owner? = {
+			OR = {
+				has_valid_civic = civic_aristocratic_elite
+				has_valid_civic = civic_techno_aristocratic_guilds
+			}
+		}
+	}
+	add_building = building_noble_estates
+}

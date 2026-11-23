@@ -1,0 +1,199 @@
+ring_noble_estates = {
+	icon = "GFX_orbitalring_noble_estates"
+	construction_days = 360
+	starbase_type = orbital_ring
+	category = sm_colony_cat
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_valid_civic = civic_aristocratic_elite
+				has_valid_civic = civic_techno_aristocratic_guilds
+			}
+		}
+		is_orbital_ring = yes
+		planet = {
+			NOR = {
+				has_modifier = slave_colony
+			}
+		}
+	}
+
+	possible = {
+		planet = {
+			NOR = {
+				has_building_construction = building_noble_estates
+				has_building = building_noble_estates
+			}
+		}
+	}
+
+	abort_trigger = {
+		exists = owner
+		NOT = {
+			owner = {
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_techno_aristocratic_guilds
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = {
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_techno_aristocratic_guilds
+				}
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_worker_coop_empire = no
+				is_gestalt = no
+			}
+		}
+		job_politician_add = @building_static_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_worker_coop_empire = yes
+			}
+		}
+		job_bureaucrat_add = @building_static_jobs
+		mult = 1.5
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 200
+			exotic_gases = 300
+		}
+
+		upkeep = {
+			energy = 5
+			exotic_gases = 2
+		}
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+arkship_noble_estates = {
+	icon = "GFX_orbitalring_noble_estates"
+	starbase_type = arkship
+	construction_days = 360
+	category = sm_colony_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		is_arkship_starbase = yes
+		owner? = {
+			OR = {
+				has_valid_civic = civic_aristocratic_elite
+				has_valid_civic = civic_techno_aristocratic_guilds
+			}
+		}
+		colony? = {
+			NOT = {
+				has_modifier = slave_colony
+			}
+		}
+	}
+
+	possible = {
+		colony? = {
+			NOR = {
+				has_building_construction = building_noble_estates
+				has_building = building_noble_estates
+			}
+		}
+	}
+
+	abort_trigger = {
+		owner? = {
+			NOT = {
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_techno_aristocratic_guilds
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		owner? = {
+			NOT = {
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_techno_aristocratic_guilds
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_200
+			exotic_gases = @arkship_cost_strategic_300
+		}
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			exotic_gases = @arkship_upkeep_strategic_2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				is_worker_coop_empire = no
+				is_gestalt = no
+			}
+		}
+		job_politician_add = @building_static_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				is_worker_coop_empire = yes
+			}
+		}
+		job_bureaucrat_add = @building_static_jobs
+		mult = 1.5
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}

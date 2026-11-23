@@ -221,6 +221,10 @@ think_tank_1 = {
 		}
 	}
 
+	station_modifier = {
+		ideological_push_mult = 0.05
+	}
+
 	upgrade_from = {
 		think_tank_0
 	}
@@ -274,6 +278,10 @@ think_tank_2 = {
 			engineering_research = @stage_2_research_bonus
 			physics_research = @stage_2_research_bonus
 		}
+	}
+
+	station_modifier = {
+		ideological_push_mult = 0.1
 	}
 
 	upgrade_from = {
@@ -331,6 +339,10 @@ think_tank_3 = {
 		}
 	}
 
+	station_modifier = {
+		ideological_push_mult = 0.15
+	}
+
 	upgrade_from = {
 		think_tank_2
 	}
@@ -371,6 +383,10 @@ think_tank_4 = {
 	}
 	upgrade_from = {
 		think_tank_3
+	}
+
+	station_modifier = {
+		ideological_push_mult = 0.2
 	}
 
 	on_build_complete = {

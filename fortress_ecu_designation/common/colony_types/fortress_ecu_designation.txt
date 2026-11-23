@@ -13,12 +13,20 @@ col_fortress_ecu = {
 
     weight_modifier = {
         modifier = {
+            add = @stickiness
+            has_designation = col_fortress_ecu
+        }
+        modifier = {
             add = 200
             has_building = building_stronghold
         }
         modifier = {
             add = 300
             has_building = building_fortress
+        }
+        modifier = {
+            add = @zone_urban
+            has_any_fortress_zone = yes
         }
     }
 

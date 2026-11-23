@@ -3,6 +3,63 @@
 All notable changes to the mods in this repository. Entries are grouped by
 date, newest first, and are derived from the commits on `main`.
 
+## 2026-11-23
+
+### Fortress Designation for Ecumenopolis
+- Updated for Stellaris 4.6.0 and bumped `supported_version` to `4.6.*`.
+- Added weighting for 4.6 fortress zones and `@stickiness` while the
+  designation is current, matching the 4.6 colony designation schema.
+
+### Haruspex
+- Updated for Stellaris 4.6.0 and bumped `supported_version` to `4.6.*`.
+- Refreshed the Haruspex and Technophant job overrides against
+  `common/pop_jobs/13_machine_age_jobs.txt`. No vanilla job changes were needed
+  beyond the existing trait-gate removals.
+
+### Megastructure System Limit Removal
+- Updated for Stellaris 4.6.0 and bumped `supported_version` to `4.6.*`.
+- Synced the full megastructure overrides with 4.6.0, restoring the
+  `ideological_push_mult` station modifiers on the Science Nexus and
+  Interstellar Assembly stages 1-4.
+
+## 2026-11-18
+
+### Combined Civics
+- Added the mod. It adds the **Techno-Aristocratic Guilds** civic, combining
+  Technocracy, Merchant Guilds and Aristocratic Elite, and the **Philosopher
+  Admiralty** civic, combining Diplomatic Corps, Distinguished Admiralty and
+  Philosopher King.
+- Both civics are permanent and can only be chosen at empire creation.
+- The combined civics and their source civics are mutually exclusive in both
+  directions.
+- Extended the Noble Estates, Noble Chateaus, Research Institute, Galactic
+  Stock Exchange and Archaeostudies Expertise trait definitions, plus the
+  Politician job-swap triggers, to recognize the combined
+  Techno-Aristocratic Guilds civic.
+- Added a Senior Science Director council position and a Lord High Admiral
+  council position for the combined civics.
+
+### Combined Civics - Ad Astra Compatibility
+- Added a compatibility mod for the `4.5 Ad Astra` Irony Mod Manager
+  collection.
+- Merged Combined Civics' civic checks with Ad Astra's age-gated Noble Estates
+  and with the Irony patch mod's resolved versions of Noble Estates, Research
+  Institute, Galactic Stock Exchange, Noble Chateaus and Archaeostudies
+  Expertise traits.
+- Added `zzzzz_` copies of the merged definitions to the current
+  `IronyModManager_4.5_Ad_Astra` patch mod so they load after its `zzz_` files.
+  Regenerating the Irony patch removes these copies.
+- No other conflicts were found with the active collection.
+
+### Ad Astra + Planetary Diversity - More Arcologies Patch
+- Added the patch. Both mods override `district_city`, so only one version
+  applied in game.
+- The merged definition keeps Ad Astra's age-based district upkeep and
+  Planetary Diversity - More Arcologies' Garden, Fortress and Commercial
+  Arcology Housing conversion targets.
+- Ship the merged definition in `zzzz_adastra_pd_district_city.txt` so it loads
+  after both mods' district files.
+
 ## 2026-11-16
 
 ### Haruspex

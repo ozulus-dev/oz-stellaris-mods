@@ -218,6 +218,10 @@ interstellar_assembly_1 = {
 		# enables triggered_opinion_of_interstellar_assembly_1
 	}
 
+	station_modifier = {
+		ideological_push_mult = 0.1
+	}
+
 	on_build_complete = {
 		from = { country_event = { id = mega.9006 } }
 	}
@@ -273,6 +277,10 @@ interstellar_assembly_2 = {
 		empire_size_mult = -0.05
 		envoys_add = 1
 		# enables triggered_opinion_of_interstellar_assembly_2
+	}
+
+	station_modifier = {
+		ideological_push_mult = 0.2
 	}
 
 	on_build_complete = {
@@ -332,6 +340,10 @@ interstellar_assembly_3 = {
 		# enables triggered_opinion_of_interstellar_assembly_3
 	}
 
+	station_modifier = {
+		ideological_push_mult = 0.3
+	}
+
 	on_build_complete = {
 		from = { country_event = { id = mega.9008 } }
 	}
@@ -388,6 +400,10 @@ interstellar_assembly_4 = {
 		empire_size_mult = -0.10
 		envoys_add = 2
 		# enables triggered_opinion_of_interstellar_assembly_4
+	}
+
+	station_modifier = {
+		ideological_push_mult = 0.4
 	}
 
 	on_build_complete = {

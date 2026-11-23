@@ -24,8 +24,9 @@ The mod adds a new colony type in
 
 - `potential` restricts it to colonized Ecumenopolis worlds that are not the
   capital.
-- `weight_modifier` gives it weight when the colony has a Stronghold or
-  Fortress, so it is selected automatically once defenses are built.
+- `weight_modifier` gives it weight when the colony has a Stronghold, a
+  Fortress or a 4.6 fortress zone, so it is selected automatically once
+  defenses are built, and keeps it sticky while it is the current designation.
 - `ai_building_set_affinity` makes the AI favor fortress buildings while the
   designation is active.
 - `planet_modifier` applies the army and defense bonuses listed above.

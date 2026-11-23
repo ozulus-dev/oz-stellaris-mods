@@ -16,9 +16,9 @@ The mod:
 - Converts every Bureaucrat job into a Haruspex job and every Politician job
   into a Technophant job, empire-wide.
 - Lifts the vanilla restriction that only Cybernetic pops can work these jobs,
-  including the Technophant gate added in 4.5.3. Availability is gated by the
-  Spiritualist ethic plus having the Cybernetic Creed **origin** or the
-  Haruspex Creed **civic**, not by a species trait.
+  including the Technophant gate added in 4.5.3 and still present in 4.6.
+  Availability is gated by the Spiritualist ethic plus having the Cybernetic
+  Creed **origin** or the Haruspex Creed **civic**, not by a species trait.
 - Applies the same Spiritualist check to both job swaps, so abandoning
   Spiritualism reverts the jobs as well as invalidating the civic.
 - Keeps the Cybernetic Creed origin's job swaps available and only lifts its
@@ -44,7 +44,7 @@ The mod **fully overrides** four vanilla definitions:
 - `technophant` (pop job)
 
 Any other mod that edits the same definitions will conflict, and load order
-decides the winner. The job overrides are copied from Stellaris 4.5.4; after a
+decides the winner. The job overrides are copied from Stellaris 4.6.0; after a
 patch, compare them against `common/pop_jobs/13_machine_age_jobs.txt`.
 
 The mod's files are:
