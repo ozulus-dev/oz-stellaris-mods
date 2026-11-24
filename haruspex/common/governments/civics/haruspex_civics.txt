@@ -8,6 +8,7 @@ civic_haruspex_creed = {
 			OR = {
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
+				value = ethic_absolute_spiritualist
 			}
 		}
 		authority = {
@@ -31,6 +32,7 @@ civic_haruspex_creed = {
 				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
+				value = ethic_absolute_spiritualist
 			}
 		}
 		authority = {

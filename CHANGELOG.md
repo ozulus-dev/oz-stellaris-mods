@@ -3,6 +3,14 @@
 All notable changes to the mods in this repository. Entries are grouped by
 date, newest first, and are derived from the commits on `main`.
 
+## 2026-11-24
+
+### Haruspex
+- Fixed the **Haruspex Creed** civic being unavailable with the Absolute
+  Spiritualist ethic added in 4.6. The civic's requirements now include
+  `ethic_absolute_spiritualist`, so the job swaps also remain active when an
+  empire upgrades from Fanatic to Absolute Spiritualist.
+
 ## 2026-11-23
 
 ### Fortress Designation for Ecumenopolis

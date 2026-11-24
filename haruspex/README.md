@@ -7,9 +7,10 @@ the Cybernetic Creed origin, which already provides the jobs.
 
 The mod:
 
-- Adds the `civic_haruspex_creed` civic. It requires the Spiritualist or
-  Fanatic Spiritualist ethic, one of the four standard (non-corporate,
-  non-gestalt) authorities, and an origin other than Cybernetic Creed.
+- Adds the `civic_haruspex_creed` civic. It requires the Spiritualist,
+  Fanatic Spiritualist or Absolute Spiritualist ethic, one of the four standard
+  (non-corporate, non-gestalt) authorities, and an origin other than Cybernetic
+  Creed.
 - Can only be selected at empire creation and cannot be removed afterwards.
 - Makes Haruspex, Technophant and Bureaucrat Jobs produce +1 Society
   and Physics Research per 100 Jobs.
