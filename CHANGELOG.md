@@ -3,6 +3,16 @@
 All notable changes to the mods in this repository. Entries are grouped by
 date, newest first, and are derived from the commits on `main`.
 
+## 2026-11-25
+
+### Mosaic Pioneers
+- Added the mod. It adds the player-only **Mosaic Pioneers** origin, which has
+  the Great Mosaic's +1 civic slot and starts with Arc Furnace, Dyson Swarm,
+  Terrestrial Sculpting, Ecological Adaptation, Climate Restoration and
+  Orbital Habitats technologies.
+- The origin uses the Great Mosaic icon and event picture, requires the Machine
+  Age DLC, and is unavailable to nomadic empires.
+
 ## 2026-11-24
 
 ### Haruspex

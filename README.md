@@ -14,5 +14,6 @@ changes.
 | Fortress Designation for Ecumenopolis | `fortress_ecu_designation/` | [README](fortress_ecu_designation/README.md) | Adds a Fortress colony designation for Ecumenopolis worlds, built around defense and soldier training. | 4.6.* |
 | Haruspex | `haruspex/` | [README](haruspex/README.md) | Adds the Cybernetic Creed's Haruspex and Technophant jobs to Spiritualist empires through the Haruspex Creed civic, plus a civic building and council position. | 4.6.* |
 | Megastructure System Limit Removal | `remove_mega_limits/` | [README](remove_mega_limits/README.md) | Removes the per-system "no existing megastructure" restriction for the Mega Shipyard, Sentry Array, Strategic Coordination Center, Science Nexus, and Interstellar Assembly. | 4.6.* |
+| Mosaic Pioneers | `mosaic_pioneers/` | [README](mosaic_pioneers/README.md) | Adds a player-only origin with the Great Mosaic's +1 civic slot and starting technologies for Arc Furnaces, Dyson Swarms, terraforming and Orbital Habitats. | 4.6.* |
 
 Versions reflect the `supported_version` declared in each mod's `descriptor.mod`.

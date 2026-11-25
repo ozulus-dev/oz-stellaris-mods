@@ -1,0 +1,40 @@
+namespace = mosaic_pioneers
+
+# Mosaic Pioneers starting technologies
+country_event = {
+	id = mosaic_pioneers.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		has_origin = origin_mosaic_pioneers
+	}
+
+	immediate = {
+		give_technology = {
+			tech = tech_orbital_arc_furnace
+			message = no
+		}
+		give_technology = {
+			tech = tech_dyson_swarm
+			message = no
+		}
+		give_technology = {
+			tech = tech_terrestrial_sculpting
+			message = no
+		}
+		give_technology = {
+			tech = tech_ecological_adaptation
+			message = no
+		}
+		give_technology = {
+			tech = tech_climate_restoration
+			message = no
+		}
+		give_technology = {
+			tech = tech_habitat_1
+			message = no
+		}
+	}
+}

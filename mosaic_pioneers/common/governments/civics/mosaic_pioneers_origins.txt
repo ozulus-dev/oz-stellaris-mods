@@ -1,0 +1,34 @@
+# Mosaic Pioneers origin
+# A player-only origin based on the Great Mosaic, with additional starting technologies.
+# Machine Age is required for the Arc Furnace and Dyson Swarm technologies.
+# The origin is restricted to non-nomadic empires because terraforming and habitats are unavailable to nomads.
+
+origin_mosaic_pioneers = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_great_mosaic.dds"
+	picture = GFX_evt_origin_great_mosaic
+
+	playable = {
+		has_machine_age_dlc = yes
+	}
+
+	ai_playable = { always = no }
+
+	potential = { always = yes }
+
+	possible = {
+		is_nomadic = no
+	}
+
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+
+	description = "origin_mosaic_pioneers_effects"
+
+	ai_weight = { weight = 0 }
+
+	random_weight = {
+		base = 0
+	}
+}
