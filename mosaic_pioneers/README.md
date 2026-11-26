@@ -19,6 +19,7 @@ The origin:
   technologies are part of that DLC.
 - Is unavailable to nomadic empires, whose technology tree does not support
   terraforming or habitats.
+- Requires Materialist, Fanatic Materialist, or Absolute Materialist ethics.
 
 ## Implementation
 
