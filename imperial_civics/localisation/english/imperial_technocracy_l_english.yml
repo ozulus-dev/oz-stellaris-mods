@@ -1,0 +1,7 @@
+﻿l_english:
+ civic_imperial_technocracy: "Imperial Technocracy"
+ civic_imperial_technocracy_desc: "Noble houses rule through scientific mastery, their privileges sustained by the secrets of dark matter."
+ civic_imperial_technocracy_effects: "$t$- £job_politician£ §YPoliticians§! are replaced by §Y$job_noble_researcher_plural$§!$TABBED_NEW_LINE$- Can build £building£ §Y$building_noble_estates$§! and the §Y$holding_noble_vacation_homes$§! holding$TABBED_NEW_LINE$- £building£ §Y$building_institute$§! and §Y$building_galactic_stock_exchange$§! provide additional £job_politician£ §YPolitician§! Jobs$TABBED_NEW_LINE$- §YExpertise§! traits provide additional research output$TABBED_NEW_LINE$$civic_dark_consortium_effects$"
+ councilor_imperial_technocracy: "Senior Science Director"
+ councilor_imperial_technocracy_female: "$councilor_imperial_technocracy$"
+ councilor_imperial_technocracy_desc: "$councilor_technocracy_desc$"

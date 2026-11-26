@@ -1,0 +1,341 @@
+building_institute = {
+	base_buildtime = @b2_time
+	planet_limit = 1
+	category = research
+
+	building_sets = {
+		research
+	}
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+		exists = owner
+		owner = { is_regular_empire = yes }
+
+		OR = {
+			has_carrier_flag = ignore_ai_building_limitations
+			owner = {
+				is_ai = no
+			}
+			has_any_research_zone = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+			owner = { is_regular_empire = no }
+		}
+	}
+
+	convert_to = {
+		building_supercomputer
+	}
+
+	allow = {
+	}
+
+	resources = {
+		category = planet_buildings
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = exotic_gases
+			COST = @b2_minerals
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		}
+		cost = {
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 0.5
+		planet_biologists_society_research_produces_add = 0.5
+		planet_engineers_engineering_research_produces_add = 0.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		planet_researchers_consumer_goods_upkeep_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		planet_researchers_energy_upkeep_add = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		planet_researchers_minerals_upkeep_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				OR = {
+					has_valid_civic = civic_technocracy
+					has_valid_civic = civic_imperial_technocracy
+				}
+			}
+		}
+		job_politician_add = @building_static_jobs
+	}
+
+	prerequisites = {
+		"tech_global_research_initiative"
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	ai_weight_coefficient = 1.5
+
+	inline_script = {
+		script = districts/ai_research_extra_weighting
+		AMOUNT = 10
+	}
+}
+
+building_galactic_stock_exchange = {
+	base_buildtime = @b2_time
+	planet_limit = 1
+	category = trade
+
+	building_sets = {
+		trade
+	}
+
+	potential = {
+		owner? = {
+			is_regular_empire = yes
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	allow = {
+		orbital_ring_and_arkship_equivalent_absent = {
+			RING = ring_galactic_stock_exchange
+			ARKSHIP = arkship_galactic_stock_exchange
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	planet_modifier = {
+		pop_trader_bonus_workforce_mult = 0.15
+	}
+
+
+	country_modifier = {
+		country_trade_fee = -0.05
+	}
+
+	inline_script = {
+		script = jobs/trader_add
+		AMOUNT = @building_static_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				OR = {
+					has_valid_civic = civic_merchant_guilds
+					has_valid_civic = civic_imperial_technocracy
+				}
+			}
+		}
+		job_politician_add = @building_static_jobs
+	}
+
+	resources = {
+		category = planet_buildings
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = rare_crystals
+			COST = @b2_minerals
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		}
+		cost = {
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_galactic_markets"
+	}
+
+	ai_resource_production = {
+		trade = 10
+	}
+}
+
+building_noble_estates = {
+	base_buildtime = @b2_time
+	icon = building_palace
+	planet_limit = 1
+
+	category = government
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_valid_civic = civic_aristocratic_elite
+				has_valid_civic = civic_imperial_technocracy
+			}
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		orbital_ring_and_arkship_equivalent_absent = {
+			RING = ring_noble_estates
+			ARKSHIP = arkship_noble_estates
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { OR = { has_civic = civic_aristocratic_elite has_civic = civic_imperial_technocracy } }
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 100
+	}
+
+	inline_script = {
+		script = "jobs/politician_add"
+		AMOUNT = @building_static_jobs_low
+	}
+
+	resources = {
+		category = planet_buildings
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = @b1_minerals
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+}
+
+holding_noble_vacation_homes = {
+	base_buildtime = @b2_time
+	owner_type = subject_holding
+	icon = building_palace
+	planet_limit = 1
+
+	category = amenity
+
+	resources = {
+		category = planet_holdings
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = @b1_minerals
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	potential = {
+		owner.overlord = { OR = { has_valid_civic = civic_aristocratic_elite has_valid_civic = civic_imperial_technocracy } }
+	}
+
+	planet_modifier = {
+		monthly_loyalty = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = no }
+		}
+		planet_amenities_add = -1500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = yes }
+		}
+		planet_amenities_no_happiness_add = -1500
+	}
+
+	on_built = {
+		planet = {
+			owner.overlord.capital_scope = {
+				append_noble_vacation_home = yes
+				refresh_noble_vacation_home_modifier = yes
+			}
+		}
+	}
+
+	on_destroy = {
+		owner.overlord.capital_scope = {
+			remove_noble_vacation_home = yes
+			refresh_noble_vacation_home_modifier = yes
+		}
+	}
+	triggered_desc = {
+		text = holding_noble_vacation_homes_effect
+	}
+}

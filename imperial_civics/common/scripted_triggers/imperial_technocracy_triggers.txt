@@ -1,0 +1,34 @@
+politician_is_science_director = {
+	OR = {
+		owner? = {
+			OR = {
+				has_valid_civic = civic_technocracy
+				has_valid_civic = civic_imperial_technocracy
+			}
+		}
+		has_active_building = building_institute
+		has_active_building = building_vultaum_reality_computer
+		has_active_building = building_fe_lab_1
+		has_active_building = building_fe_lab_2
+	}
+}
+
+politician_is_noble = {
+	owner? = {
+		OR = {
+			OR = {
+				has_valid_civic = civic_aristocratic_elite
+				has_valid_civic = civic_imperial_technocracy
+			}
+			is_cyber_imperial = yes
+		}
+	}
+}
+
+is_dark_consortium_empire = {
+	OR = {
+		has_valid_civic = civic_dark_consortium
+		has_valid_civic = civic_imperial_technocracy
+		has_valid_civic = civic_corporate_dark_consortium
+	}
+}

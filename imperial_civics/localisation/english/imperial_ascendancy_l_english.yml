@@ -1,0 +1,7 @@
+﻿l_english:
+ civic_imperial_ascendancy: "Imperial Ascendancy"
+ civic_imperial_ascendancy_desc: "An enduring imperial administration guides its people toward ever greater levels of fulfillment."
+ civic_tooltip_imperial_ascendancy_effects: "$civic_tooltip_ascensionists_effects$"
+ councilor_imperial_ascendancy: "$councilor_ascensionists$"
+ councilor_imperial_ascendancy_female: "$councilor_ascensionists_female$"
+ councilor_imperial_ascendancy_desc: "$councilor_ascensionists_desc$"

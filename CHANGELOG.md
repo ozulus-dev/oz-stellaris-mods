@@ -3,6 +3,14 @@
 All notable changes to the mods in this repository. Entries are grouped by
 date, newest first, and are derived from the commits on `main`.
 
+## 2026-11-26
+
+### Imperial Civics
+- Added two permanent Imperial civics: Imperial Technocracy and Imperial
+  Ascendancy, combining selected effects of several vanilla civics.
+- Added custom icons and integrated the relevant Stellaris 4.6 jobs, buildings,
+  council positions, traits and scripted effects.
+
 ## 2026-11-25
 
 ### Mosaic Pioneers
