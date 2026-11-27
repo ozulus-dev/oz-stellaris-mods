@@ -1,0 +1,36 @@
+civic_imperial_technocracy = {
+ icon = "gfx/interface/icons/governments/civics/civic_imperial_technocracy.dds"
+ description = civic_imperial_technocracy_effects
+ modification = no
+ playable = { has_astral_planes_dlc = yes }
+ ai_playable = { has_astral_planes_dlc = yes }
+ potential = {
+  ethics = { NOT = { value = ethic_gestalt_consciousness } }
+  authority = { NOT = { value = auth_corporate } }
+ }
+ possible = {
+  authority = { value = auth_imperial }
+  ethics = {
+   OR = {
+    text = civic_tooltip_materialist
+    value = ethic_materialist
+    value = ethic_fanatic_materialist
+    value = ethic_absolute_materialist
+   }
+  }
+  civics = {
+   NOR = {
+    value = civic_technocracy
+    value = civic_aristocratic_elite
+    value = civic_dark_consortium
+    value = civic_merchant_guilds
+   }
+  }
+ }
+ modifier = {
+  num_tech_alternatives_add = 1
+  pop_cat_ruler_bonus_workforce_mult = 0.1
+ }
+ random_weight = { base = @civic_rare_random_weight }
+ ai_weight = { base = @civic_rare_random_weight }
+}

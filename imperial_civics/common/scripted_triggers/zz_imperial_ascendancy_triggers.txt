@@ -1,0 +1,11 @@
+# Include Imperial Ascendancy in the vanilla starting ascension tier and
+# Path of the Self effects shared by all Ascensionist civics.
+is_ascensionist_empire = {
+	OR = {
+		has_valid_civic = civic_ascensionists
+		has_valid_civic = civic_corporate_ascensionists
+		has_valid_civic = civic_hive_ascensionists
+		has_valid_civic = civic_machine_ascensionists
+		has_valid_civic = civic_imperial_ascendancy
+	}
+}

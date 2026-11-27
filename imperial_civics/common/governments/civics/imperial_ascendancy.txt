@@ -1,0 +1,31 @@
+civic_imperial_ascendancy = {
+	description = "civic_tooltip_imperial_ascendancy_effects"
+	icon = "gfx/interface/icons/governments/civics/civic_imperial_ascendancy.dds"
+	modification = no
+
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		authority = { value = auth_imperial }
+		civics = {
+			NOR = {
+				value = civic_byzantine_bureaucracy
+				value = civic_ascensionists
+				value = civic_philosopher_king
+			}
+		}
+	}
+	random_weight = { base = @civic_uncommon_random_weight }
+	ai_weight = { base = @ai_civic_uncommon_base_weight }
+	modifier = {
+		planet_bureaucrats_unity_produces_add = 1
+		planet_bureaucrats_stability_produces_add = 1
+		planetary_ascension_effect_mult = 0.25
+		planetary_ascension_cost_mult = -0.1
+		tradition_cost_empire_size_mult = -0.25
+		ruler_skill_add = 5
+		add_attunement_the_instrument_of_desire = @civic_attunement1
+	}
+}

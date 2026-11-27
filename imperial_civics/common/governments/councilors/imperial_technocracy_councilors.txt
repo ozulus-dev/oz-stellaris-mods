@@ -1,0 +1,22 @@
+councilor_imperial_technocracy = {
+	leader_class = { scientist }
+	is_leader_possible = {
+		leader_class = scientist
+	}
+	civic = civic_imperial_technocracy
+	custom_tooltip = councilor_technocracy_tt
+	modifier = {
+		# Physics to Biologists
+		planet_biologists_physics_research_produces_add = 0.05
+		planet_biologists_consumer_goods_upkeep_add = 0.1
+		# Society to Engineers
+		planet_engineers_society_research_produces_add = 0.05
+		planet_engineers_consumer_goods_upkeep_add = 0.1
+		# Engineering to Physicists
+		planet_physicists_engineering_research_produces_add = 0.05
+		planet_physicists_consumer_goods_upkeep_add = 0.1
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
